@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting</title>
+    <link rel="stylesheet" href="Voter.css">
+</head>
+<body>
+    <h2>Enter Your Age:</h2>
+    <div>
+        <input type="number" id="age">
+    </div>
+    <button onclick="voting()">Check</button>
+    <h1 id="result"></h1>
+    <script>
+        var string="";
+        voting=()=>
+        {
+            var userage=document.getElementById("age").value;
+            if(userage>=18)
+            {
+                string="You can Vote";
+            }
+            else
+            {
+                string="You cannot Vote";
+            }
+            document.getElementById("result").innerHTML=string;
+        }
+    </script>
+</body>
+</html>
